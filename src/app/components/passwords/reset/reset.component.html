@@ -1,0 +1,27 @@
+<div class="pub-auth">
+    <div class="pub-form pub-shadow">
+        <form (submit)="onResetPasswordSubmit()">
+            <div class="pub-row pub-margin-bottom">
+                <h3>Reset Password</h3>
+            </div>
+            <div class="pub-row pub-margin-bottom">
+                <input type="email" class="pub-input" [(ngModel)]="name" placeholder="Name"
+                       name="name" value="">
+            </div>
+            <div class="pub-row pub-margin-bottom">
+                <label for="password" class="pub-label">Password</label>
+                <input type="password" [(ngModel)]="password" placeholder="Password" class="pub-input"
+                       name="password" id="password">
+            </div>
+            <div class="pub-row pub-margin-bottom">
+                <label for="password_confirmation" class="pub-label">Confirm Password</label>
+                <input type="password" class="pub-input" [(ngModel)]="password_confirmation"
+                       placeholder="Confirm Password"
+                       name="password_confirmation" id="password_confirmation" value="">
+            </div>
+            <div class="pub-row pub-margin-bottom">
+                <button type="submit" class="pub-button pub-current">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>

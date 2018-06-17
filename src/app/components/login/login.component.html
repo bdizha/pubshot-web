@@ -1,0 +1,31 @@
+<div class="pub-auth slide-in-down">
+    <div class="pub-tabs">
+        <a class="pub-tab pub-tab-current" [routerLink]="['/login']">
+            <h2>Login</h2>
+        </a>
+        <a class="pub-tab" [routerLink]="['/register']">
+            <h2>Register</h2>
+        </a>
+    </div>
+    <div class="pub-form pub-shadow">
+        <form (submit)="onLoginSubmit()">
+            <div class="pub-row pub-margin-bottom">
+                <label for="email" class="pub-label">Email</label>
+                <input type="email" class="pub-input" [(ngModel)]="email" placeholder="Email"
+                       name="email" id="email">
+            </div>
+            <div class="pub-row pub-margin-bottom">
+                <label for="password" class="pub-label">Password</label>
+                <input type="password" [(ngModel)]="password" placeholder="Password" class="pub-input"
+                       name="password" id="password">
+            </div>
+            <div class="pub-row pub-margin-bottom">
+                <button type="submit" class="pub-button pub-current">Login</button>
+            </div>
+            <div class="pub-row pub-radius pub-form-foot">
+                <span>Forgot your</span>&nbsp;
+                <a class="pub-link pub-color" [routerLink]="['/password/email']">Password?</a>
+            </div>
+        </form>
+    </div>
+</div>

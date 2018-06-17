@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<app-welcome *ngIf="isWelcome()"></app-welcome>
+<div class="pub-nucleus slide-in-down">
+    <router-outlet></router-outlet>
+</div>
+<div class="pub-footer">
+    <ul class="pub-nav pub-centered pub-margin-bottom">
+        <li><a routerLink="/page/about-us" class="pub-link" href="http://pubshot.local/meta/about-us">About Us</a></li>
+        <li><a routerLink="/page/user-terms" class="pub-link">Terms</a></li>
+        <li><a routerLink="/page/privacy-policy" class="pub-link">Privacy</a></li>
+    </ul>
+    <div class="pub-copy pub-centered">&copy; 2018 <span>PubShot</span></div>
+</div>
+<div [hidden]="!isLoading" class="pub-loader">
+    <div class="pub-loading">
+        <button class="pub-loading-container">
+            <svg width="50" height="50" viewBox="0 0 44 44">
+                <circle class="pub-loading-circle" cx="22" cy="22" r="20" fill="none" stroke-width="4"></circle>
+            </svg>
+        </button>
+    </div>
+</div>

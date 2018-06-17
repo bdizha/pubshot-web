@@ -1,0 +1,18 @@
+
+
+@font-face {
+    font-family: 'DriveTribe';
+    font-style: normal;
+    src: local("DriveTribe"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-condensed.woff2') format("woff2"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-condensed.woff') format("woff"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-condensed.ttf') format("ttf");
+}
+
+@font-face {
+    font-family: 'DriveTribe';
+    font-weight: bold;
+    src: local("DriveTribe"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-condensed-bold.woff2') format("woff2"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-condensed-bold.woff') format("woff"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-condensed-bold.ttf') format("ttf");
+}
+
+@font-face {
+    font-family: 'DriveTribe Condensed';
+    src: local("DriveTribe Condensed"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-extra-condensed.woff2') format("woff2"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-extra-condensed.woff') format("woff"), url('https://assets.drivetribe.com/v2.3.3-150-g4badbfe0/uniform-extra-condensed.ttf') format("ttf");
+}

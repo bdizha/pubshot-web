@@ -1,0 +1,54 @@
+.modal .modal-dialog {
+    top: 100px;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.modal .modal-content{
+    border-radius: 0;
+}
+
+button.close {
+    border: 0;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    z-index: 99;
+    opacity: 1;
+}
+
+.btn-facebook{
+    height: 54px;
+    width: 100%;
+}
+
+.btn-facebook, .btn-facebook:hover, .btn-facebook:focus, .btn-facebook:visited {
+    background-color: #264285;
+    background-image: linear-gradient(#3857A1, #264285);
+    border-color: #264285;
+    color: #fff
+}
+
+.btn-facebook:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #264285;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAt1BMVEU7WZg7WZg7WZg7WZg7WZg7WZg7WZg7WZg7WZg7WZg7WZg7WZg7WZg8Wpg7WZg7WZg7WZj///87WZhieq3+/v/y9PintdFedqrI0OLz9flqgbFSbaTm6vLQ1+bp7fSbqso8Wpi8xtyZqMn4+fv9/f5Vb6aSo8a+yN16jrlCX5zf5O7j5/BRbKQ9W5mHmcBUbqVDYJzFzuCruNOTo8Z5jrlheaxIZJ/b4OzCzN+qt9Lp7PPT2ujEzeBXeFKQAAAAEXRSTlMUAO6ZmhXZne3vF92f8OzaE+AmR/YAAADGSURBVHhe7dM3jsMwFAbhR0pyDvuoLOecc9h4/3Mt3BAuDAPiD6jiHODrhgQ5FWVYs1ETRCUFVPfIVVBlamFAlRRYoYAF4kHSnXAQhv3N718nN5D1+Lk4J7CLAkaA4YgZAsaMAf4UBBLGgFkAAnMGgQXrwmiZ+Y9WeYC1Bn62Ri+kGtibvcC6AwocUUAVDViA33RCgTMKXFDgigI3FLiDQKpA4BMFvlDg+zVgb7SABSxgAYkBklwMcInaCFAiEp4jTQHpfIh/6JofXDWboT0AAAAASUVORK5CYII=)
+}
+
+.btn-medium.btn-facebook {
+    text-indent: 24px
+}
+
+.btn-medium.btn-facebook:before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px
+}
