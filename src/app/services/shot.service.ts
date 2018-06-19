@@ -18,6 +18,6 @@ export class ShotService extends BaseService {
 
     getShots(): Observable<Shot[]> {
         return this.http.get<Shot[]>(CONFIG.API_URL + 'shots')
-            .pipe(map((data: any) => data.shots));
+            .pipe(map((data: any) => data.shots.data));
     }
 }

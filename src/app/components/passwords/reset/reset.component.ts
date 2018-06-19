@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {AuthService} from "../../../services/auth.service";
+import {UserService} from "../../../services/user.service";
 import {Router} from "@angular/router";
 import {AuthGuard} from "../../../guard/auth.guard";
 
@@ -15,6 +16,7 @@ export class PasswordResetComponent implements OnInit {
     previousUrl;
 
     constructor(private authService: AuthService,
+                private userService: UserService,
                 private router: Router,
                 private authGuard: AuthGuard,) {
     }
@@ -32,7 +34,7 @@ export class PasswordResetComponent implements OnInit {
             password: this.password
         };
 
-        this.authService.resetPassword(user).subscribe(data => {
+        this.userService.resetPassword(user).subscribe(data => {
             if (data.success) {
                 console.log('You are successfully logged in');
 

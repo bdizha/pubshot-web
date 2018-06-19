@@ -31,7 +31,7 @@ export class JwtInterceptor implements HttpInterceptor {
                         this.authService.logout();
                         this.router.navigate(['/login']);
                     }
-                    return of(err as T);
+                    return of(err);
                 })
             );
 

@@ -234,11 +234,11 @@ a.pub-tab:hover h2 {
 }
 
 .pub-profile-circle-container{
-    width: 165px;
+    width: 170px;
     position: absolute;
-    top: -7.5px;
+    top: -10px;
     left: 50%;
-    margin-left: -82.5px;
+    margin-left: -85px;
 }
 
 .pub-profile-circle{

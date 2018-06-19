@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {AuthService} from "../../../services/auth.service";
+import {UserService} from "../../../services/user.service";
 import {Router} from "@angular/router";
 import {AuthGuard} from "../../../guard/auth.guard";
 
@@ -12,6 +13,7 @@ export class PasswordEmailComponent implements OnInit {
     email: String;
 
     constructor(private authService: AuthService,
+                private userService: UserService,
                 private router: Router,
                 private authGuard: AuthGuard) {
     }
@@ -21,7 +23,7 @@ export class PasswordEmailComponent implements OnInit {
     }
 
     onEmailPasswordSubmit() {
-        this.authService.emailPassword(this.email).subscribe(data => {
+        this.userService.emailPassword(this.email).subscribe(data => {
             if (data.success) {
                 console.log('You are successfully requested your password');
                 this.router.navigate(['/login']);
