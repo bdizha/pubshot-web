@@ -9,43 +9,40 @@
     </div>
     <div class="pub-form pub-shadow">
         <form  [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
-            <div class="pub-row pub-margin-bottom">
-                <label for="name" class="pub-label">Full Name</label>
-                <input type="text" class="pub-input" formControlName="name" placeholder="Full Name"
-                       name="name" id="name" value="">
+            <div class="pub-row form-group label-floating">
+                <label for="name" class="pub-label control-label">Full Name</label>
+                <input type="text" class="pub-input form-control" formControlName="name" name="name" id="name" value="">
                 <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
                     <div *ngIf="name.errors.required">Full name is required.</div>
                 </div>
             </div>
-            <div class="pub-row pub-margin-bottom">
-                <label for="name" class="pub-label">Username</label>
-                <input type="text" class="pub-input" formControlName="username" placeholder="Username"
-                       name="username" id="username" value="">
+            <div class="pub-row form-group label-floating" [ngClass]="{'pub-is-focused': username.dirty, 'second': true, 'third': false}">
+                <label for="name" class="pub-label control-label">Username</label>
+                <input type="text" class="pub-input form-control" formControlName="username" name="username" id="username" value="">
                 <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
                     <div *ngIf="username.errors.required">Username is required.</div>
                 </div>
             </div>
-            <div class="pub-row pub-margin-bottom">
-                <label for="email" class="pub-label">Email</label>
-                <input type="email" class="pub-input" formControlName="email" placeholder="Email"
-                       name="email" id="email" value="">
+            <div class="pub-row form-group label-floating">
+                <label for="email" class="pub-label control-label">Email</label>
+                <input type="email" class="pub-input form-control" formControlName="email" name="email" id="email" value="">
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
                     <div *ngIf="email.errors.required">Email is required.</div>
                     <div *ngIf="email.errors.email">Email is invalid.</div>
                 </div>
             </div>
-            <div class="pub-row pub-margin-bottom">
-                <label for="password" class="pub-label">Password</label>
-                <input type="password" formControlName="password" placeholder="Password" class="pub-input"
+            <div class="pub-row form-group label-floating">
+                <label for="password" class="pub-label control-label">Password</label>
+                <input type="password" formControlName="password" class="pub-input form-control"
                        name="password" id="password">
                 <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
                     <div *ngIf="password.errors.required">Password is required.</div>
                 </div>
             </div>
-            <div class="pub-row pub-margin-bottom">
+            <div class="pub-row form-group label-floating">
                 <button type="submit" class="pub-button pub-current" [disabled]="registerForm.invalid">Join</button>
             </div>
-            <div class="pub-row pub-radius pub-form-foot">
+            <div class="pub-row pub-radius pub-form-foot pub-centered">
                 <span>
                     <span>By pressing join, you agree to Pubshot's&nbsp;</span>
                     <a routerLink="/page/user-terms" class="pub-link pub-color" target="_blank">terms of use</a>

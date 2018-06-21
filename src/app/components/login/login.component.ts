@@ -3,7 +3,7 @@ import {AuthService} from "../../services/auth.service";
 import {UserService} from "../../services/user.service";
 import {Router} from "@angular/router";
 import {AuthGuard} from "../../guard/auth.guard";
-import {Form} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
     selector: 'app-login',
@@ -11,9 +11,14 @@ import {Form} from "@angular/forms";
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-    email: String;
-    password: String;
-    previousUrl;
+
+    previousUrl: String = "";
+    user = {
+        email: "",
+        password: ""
+    };
+
+    loginForm: FormGroup;
 
     constructor(private authService: AuthService,
                 private userService: UserService,
@@ -22,6 +27,15 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.loginForm = new FormGroup({
+            'email': new FormControl(this.user.email,
+                [
+                    Validators.required,
+                    Validators.email
+                ]),
+            'password': new FormControl(this.user.password, Validators.required)
+        });
+
         if (this.authGuard.redirectUrl) {
             this.previousUrl = this.authGuard.redirectUrl;
             this.authGuard.redirectUrl = undefined;
@@ -29,9 +43,9 @@ export class LoginComponent implements OnInit {
     }
 
     onLoginSubmit() {
-        const user = {
-            email: this.email,
-            password: this.password
+        let user = {
+            email: this.loginForm.value.email,
+            password: this.loginForm.value.password
         };
 
         this.userService.login(user).subscribe(data => {
@@ -57,6 +71,14 @@ export class LoginComponent implements OnInit {
 
             }
         });
+    }
+
+    get email() {
+        return this.loginForm.get('email');
+    }
+
+    get password() {
+        return this.loginForm.get('password');
     }
 
 }

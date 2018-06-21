@@ -9,7 +9,7 @@ html {
 
 body {
     font-size: 16px;
-    color: rgb(20, 20, 20);
+    color: rgb(38, 38, 38);
     font-family: 'DriveTribe', 'Arial', sans-serif;
     font-weight: 400;
     line-height: 1.20;
@@ -39,12 +39,12 @@ body {
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: rgb(20, 20, 20)
+    background-color: rgb(38, 38, 38)
 }
 
 ::-webkit-scrollbar {
     width: 15px;
-    background-color: rgb(20, 20, 20)
+    background-color: rgb(38, 38, 38)
 }
 
 ::-webkit-scrollbar-thumb {
@@ -71,16 +71,20 @@ strong {
     z-index: 10;
     width: 100%;
     overflow: visible;
-    border-top: 4px solid rgb(20, 20, 20);
+    border-top: 4px solid rgb(38, 38, 38);
 }
 
 .pub-home-page .pub-header {
-    background: rgb(20, 20, 20);
+    background: rgb(38, 38, 38);
 }
 
 a, a:visited {
-    color: rgb(20, 20, 20);
+    color: rgb(38, 38, 38);
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none !important;
 }
 
 .pub-nav {
@@ -170,12 +174,13 @@ a, a:visited {
 }
 
 .pub-tabs {
-    display: table;
+    display: block;
     margin-bottom: 0px;
+    text-align: center;
 }
 
 .pub-tab {
-    display: table-cell;
+    display: inline-block;
 }
 
 .pub-tabs a.pub-tab {
@@ -185,7 +190,13 @@ a, a:visited {
 }
 
 .pub-tabs a.pub-tab h2 {
-    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    font-weight: 400;
+    padding-bottom: 11px;
+    margin-bottom: 0;
+    padding-top: 11px;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 a.pub-tab.pub-tab-current,
@@ -195,7 +206,7 @@ a.pub-tab:hover {
 
 a.pub-tab.pub-tab-current h2,
 a.pub-tab:hover h2 {
-    border-bottom: 3px solid #fe880d;
+    border-top: 3px solid #fe880d;
 }
 
 .pub-tab h2 {
@@ -233,7 +244,7 @@ a.pub-tab:hover h2 {
     overflow: hidden;
 }
 
-.pub-profile-circle-container{
+.pub-profile-circle-container {
     width: 170px;
     position: absolute;
     top: -10px;
@@ -241,7 +252,7 @@ a.pub-tab:hover h2 {
     margin-left: -85px;
 }
 
-.pub-profile-circle{
+.pub-profile-circle {
     stroke: #fe880d;
 }
 
@@ -280,7 +291,7 @@ a.pub-tab:hover h2 {
     margin-top: 10px;
 }
 
-.pub-profile-name{
+.pub-profile-name {
     padding: 15px;
 }
 
@@ -298,14 +309,18 @@ a.pub-tab:hover h2 {
 
 .pub-profile-tab .pub-tab-count {
     font-weight: bold;
+    font-size: 18px;
+    display: block;
 }
 
 .pub-profile-tab .pub-tab-label {
     font-weight: 300;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
 .pub-tab-active,
-.pub-profile-tab:hover{
+.pub-profile-tab:hover {
     border-bottom: 1px solid #fe880d;
 }
 
@@ -384,16 +399,18 @@ a.pub-tab:hover h2 {
     font-size: 14px;
     vertical-align: top;
     min-width: 30px;
-    padding: 15px;
+    padding: 11px 15px;
     margin: 0;
-    border: none;
     position: relative;
-    background: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0);
     outline: none;
     width: 100%;
     overflow: hidden;
     font-weight: 400;
-    border-bottom: 1px solid #e5e5e5;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
 }
 
 select {
@@ -408,10 +425,13 @@ select {
 
 .pub-input:focus,
 .pub-input:hover {
-    border-bottom: 1px solid rgba(254, 156, 53, 0.956);
+    border: 1px solid #fe880d;
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .pub-padding {
@@ -426,17 +446,20 @@ select {
     padding-right: 22px;
 }
 
-.pub-label {
-    padding-bottom: 5px;
-    display: inline-block;
-    color: #AAA;
-    min-width: 70px;
-    font-size: 14px;
-    font-weight: bold;
+.pub-form .pub-row {
+    position: relative;
+    padding-top: 22px;
+    margin-top: 11px;
 }
 
 .pub-label:after {
     content: ":";
+}
+
+.pub-form .pub-label {
+    position: absolute;
+    top: 34px;
+    left: 15px;
 }
 
 .pub-block {
@@ -497,18 +520,18 @@ h1 {
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
-    border: 2px solid rgb(20, 20, 20);
+    border: 2px solid rgb(38, 38, 38);
     background: rgb(100, 100, 100);
     border-radius: 500px;
 }
 
 .pub-button:hover {
-    background: rgb(20, 20, 20);
-    border: 2px solid rgb(20, 20, 20);
+    background: rgb(38, 38, 38);
+    border: 2px solid rgb(38, 38, 38);
 }
 
 .pub-button-small {
-    padding: 4px 22px;
+    padding: 11px 22px;
     background: #FE9C35;
     border: 2px solid #FE9C35;
 }
@@ -569,14 +592,6 @@ h1 {
     margin: 0 auto;
     max-width: 400px;
     margin-top: 75px;
-}
-
-.pub-auth .pub-input {
-    padding: 15px 0;
-}
-
-.pub-auth .pub-label {
-    display: none;
 }
 
 .pub-auth .pub-margin-bottom {
@@ -713,8 +728,8 @@ h1 {
 }
 
 .pub-dark {
-    background: rgb(20, 20, 20);
-    background: url(/assets/images/pub-backdrop.jpg) no-repeat 0 0;
+    background: rgb(38, 38, 38);
+    /*background: url(/assets/images/pub-backdrop.jpg) no-repeat 0 0;*/
     background-size: cover;
     background-attachment: fixed
 }
@@ -726,7 +741,7 @@ h1 {
 
 .pub-logged .pub-header {
     z-index: 20;
-    background: rgb(20, 20, 20);
+    background: rgb(38, 38, 38);
 }
 
 .pub-dark .pub-footer .pub-link,
@@ -887,7 +902,7 @@ h1 {
 .pub-shot-comment-owner .pub-link {
     display: inline-block;
     font-weight: 700;
-    color: rgb(20, 20, 20);
+    color: rgb(38, 38, 38);
 }
 
 .pub-link:hover {
@@ -921,7 +936,7 @@ h1 {
 .pub-shot-owner-name .pub-link {
     font-weight: 900;
     font-size: 16px;
-    color: rgb(20, 20, 20);
+    color: rgb(38, 38, 38);
 }
 
 .pub-shot-pack-name .pub-link {
@@ -938,7 +953,12 @@ h1 {
     position: relative;
     overflow: hidden;
     display: block;
-    padding-bottom: 100%;
+}
+
+.pub-shot-media:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
 
 .pub-shot-media-overlay {
@@ -961,6 +981,11 @@ h1 {
     left: 0;
     position: absolute;
     top: 0;
+    bottom: 0;
+    right: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
 }
 
 .pub-shot .pub-column {
@@ -1254,7 +1279,7 @@ app-root {
 }
 
 app-root .pub-overlay {
-    background: rgb(20, 20, 20);
+    background: rgb(38, 38, 38);
     height: 100%;
 }
 
@@ -1263,7 +1288,7 @@ app-root .pub-overlay {
     width: 100%;
     margin-top: 40px;
     padding: 5px;
-    margin-bottom: 1px;
+    margin-bottom: 120px;
     background: #FFF;
 }
 
@@ -1281,42 +1306,185 @@ app-root .pub-overlay {
     margin-top: 0;
 }
 
-.pub-profile-grid-sizer,
 .pub-profile-shots ul li {
-    width: 33.333333%;
+    visibility: visible;
+    -webkit-transform: translateY(0) scale(1);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    padding: 8px;
 }
 
-.pub-profile-shots ul li {
-    text-align: center !important;
-    z-index: 4;
+@media (max-width: 767px) {
+    .pub-profile-shots ul li {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        width: 55%;
+        min-height: 1;
+        position: relative;
+        padding-top: 12px
+    }
+}
+
+@media (min-width: 768px) {
+    .pub-profile-shots ul li {
+        padding: 8px
+    }
+}
+
+.pub-profile-shots ul h4 {
+    color: #919496
+}
+
+@media (max-width: 1199px) {
+    .pub-profile-shots ul h4 {
+        font-size: 16px
+    }
+}
+
+.pub-profile-shots ul figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer
+}
+
+@media (min-width: 768px) {
+    .pub-profile-shots ul .col-md-4:nth-child(4), .pub-profile-shots ul .col-sm-4:nth-child(4) {
+        clear: both
+    }
+}
+
+.pub-profile-shots ul .album-play-button h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pub-profile-shots ul .album-play-button h2 {
+        font-size: 22px
+    }
+}
+
+.pub-profile-shots ul .album-play-icon svg {
+    width: 25px;
+    height: 30px;
+    position: relative
+}
+
+.pub-profile-shots ul .album-play-icon h2 {
+    font-size: 16px;
+    font-weight: 400
+}
+
+.pub-profile-shots ul .album-play-icon h4 {
+    font-size: 14px
+}
+
+.pub-profile-shots ul .album-no-overlay h2, .pub-profile-shots ul .album-no-overlay h4, .pub-profile-shots ul .scroll h2, .pub-profile-shots ul .scroll h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     margin-bottom: 0;
-    padding: 5px;
-    float: left;
+    cursor: pointer
 }
 
-.pub-profile-shots ul li a {
-    display: table-cell;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    overflow: hidden;
+.pub-profile-shots ul .album-no-overlay h2, .pub-profile-shots ul .scroll h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 24px
+}
+
+.pub-profile-shots ul .album-no-overlay h4, .pub-profile-shots ul .scroll h4 {
+    font-size: 16px
+}
+
+.pub-profile-shots ul .img-responsive {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.pub-profile-shots ul figure .content-overlay {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0
+}
+
+.pub-profile-shots ul li:hover .content-overlay {
+    opacity: 1
+}
+
+.pub-profile-shots ul li:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+}
+
+.pub-profile-shots ul li:hover .content-details a{
+    color: #FE9C35;
+}
+
+.pub-profile-shots ul li:hover .content-details .btn{
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 16px 16pxK;
+    -webkit-transition-property: background-color,border-color,color,-webkit-box-shadow,-webkit-filter;
+    transition-property: background-color,border-color,color,-webkit-box-shadow,-webkit-filter;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-property: background-color,border-color,color,box-shadow,filter,-webkit-box-shadow,-webkit-filter;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    border-width: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    min-width: 120px;
+    white-space: normal;
+}
+
+.pub-profile-shots ul .scroll h2, .pub-profile-shots ul li:hover .album-no-overlay h2 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #919496
+}
+
+.pub-profile-shots ul .scroll h4, .pub-profile-shots ul li:hover .album-no-overlay h4 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #c1c3c6
+}
+
+.pub-profile-shots ul .content-details {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all .2s ease-in-out 0s;
+    transition: all .2s ease-in-out 0s;
+    position: absolute;
     text-align: center;
-    vertical-align: bottom;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0
 }
 
-.pub-profile-shots ul li.pub-profile-shot-active a,
-.pub-profile-shots ul li a:hover {
-    border: 1px solid #e63d1c;
-}
-
-.pub-profile-shots ul li img {
-    display: block;
-    max-width: 100%;
-    border-radius: 3px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 3px;
-    overflow: hidden;
+.text-white {
+    color: #fff;
 }
 
 .pub-profile-edit {
@@ -1501,19 +1669,19 @@ app-root .pub-overlay {
 
 .pub-home-buttons .pub-sign-in {
     color: #FFFFFF;
-    background: rgb(20, 20, 20);
+    background: rgb(38, 38, 38);
 }
 
 .pub-home-buttons .pub-create-account {
-    color: rgb(20, 20, 20);
+    color: rgb(38, 38, 38);
     background: #FFFFFF;
     font-weight: 700;
-    border: 2px solid rgb(20, 20, 20);
+    border: 2px solid rgb(38, 38, 38);
 }
 
 .pub-home-buttons .pub-create-account:hover {
     color: #FFFFFF;
-    background: rgb(20, 20, 20);
+    background: rgb(38, 38, 38);
 }
 
 .pub-loader {
@@ -1522,7 +1690,7 @@ app-root .pub-overlay {
     right: 0;
     bottom: 0;
     top: 0;
-    background: rgba(0, 0, 0, .985);
+    background: rgba(10, 10, 10, .985);
     z-index: 9998
 }
 

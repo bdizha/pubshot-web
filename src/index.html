@@ -17,7 +17,9 @@
     <meta id="viewport" name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>PubShot - Moments Re-imagined</title>
-    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Raleway:300,700|Roboto+Condensed:300,700&amp;subset=latin,latin-ext" as="style">
+    <link rel="stylesheet" media="screen"
+          href="https://fonts.googleapis.com/css?family=Raleway:300,700|Roboto+Condensed:300,700&amp;subset=latin,latin-ext"
+          as="style">
     <base href="/">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/fonts.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/animate.css">
@@ -25,10 +27,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/overrides.css">
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/material.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
 </head>
 <body>
 <app-root class=""></app-root>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.material.init();
+    });
+</script>
 </body>
 </html>

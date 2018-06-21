@@ -3,10 +3,10 @@
 }
 
 .modal {
-    background-color: rgba(0, 0, 0, .85);
+    background-color: rgba(10, 10, 10, .85);
 }
 
-.modal .modal-content{
+.modal .modal-content {
     border-radius: 0;
 }
 
@@ -19,7 +19,7 @@ button.close {
     opacity: 1;
 }
 
-.btn-facebook{
+.btn-facebook {
     height: 54px;
     width: 100%;
 }
@@ -51,4 +51,43 @@ button.close {
     width: 24px;
     height: 24px;
     background-size: 24px
+}
+
+.alert-danger {
+    color: #db4437;
+    background: none;
+    border: none;
+    font-size: 14px;
+    padding: 5px 15px 0;
+    margin-bottom: 0;
+}
+
+.form-group {
+    padding-bottom: 7px;
+    margin: 28px 0 0 0;
+}
+
+.form-group.label-floating label.control-label,
+.form-group.label-placeholder label.control-label {
+    top: 28px;
+    line-height: 1.42857143;
+    color: #AAA;
+    min-width: 70px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-group.label-static label.control-label,
+.form-group.label-floating.is-focused label.control-label,
+.form-group.label-floating:not(.is-empty) label.control-label {
+    top: 0px;
+    left: 15px;
+    line-height: 1.07142857;
+}
+
+.form-group.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
+    top: -30px;
+    left: 0;
+    font-size: 12px;
+    line-height: 1.07142857;
 }
