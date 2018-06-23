@@ -1,3 +1,5 @@
+import {Pack} from "./pack.model";
+
 export class Shot {
     id: number;
     caption: string;
@@ -6,4 +8,5 @@ export class Shot {
     user_id: number;
     created_at: string;
     updated_at: string;
+    pack: Pack = new Pack();
 }

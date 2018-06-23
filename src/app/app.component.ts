@@ -12,6 +12,7 @@ import {filter} from "rxjs/operators";
 export class AppComponent implements OnInit, AfterViewInit {
     isHome: boolean = false;
     isDark: boolean = false;
+    isModal: boolean = false;
     isLogged: boolean = false;
     routerEvents: any;
     isLoading: boolean = false;
@@ -23,13 +24,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-        this.isDark = this.routerService.get("is_dark");
         this.routerEvents = this.router.events
             .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe(() => {
                 this.setIsDark();
                 this.setIsHome();
                 this.setIsLogged();
+                this.setIsModal();
             });
     }
 
@@ -59,8 +60,19 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.isHome = this.router.url === "/";
     }
 
+    setIsModal() {
+        this.isModal = this.routerService.get("isModal");
+
+        if (this.isModal) {
+            this.renderer.addClass(document.body, 'pub-modal');
+        }
+        else {
+            this.renderer.removeClass(document.body, 'pub-modal');
+        }
+    }
+
     setIsDark() {
-        this.isDark = this.routerService.get("is_dark");
+        this.isDark = this.routerService.get("isDark");
 
         if (this.isDark) {
             this.renderer.addClass(document.body, 'pub-dark');

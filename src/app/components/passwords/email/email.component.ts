@@ -1,29 +1,40 @@
 import {Component, OnInit} from "@angular/core";
-import {AuthService} from "../../../services/auth.service";
 import {UserService} from "../../../services/user.service";
 import {Router} from "@angular/router";
-import {AuthGuard} from "../../../guard/auth.guard";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-    selector: 'app-auth',
+    selector: 'app-password-email',
     templateUrl: './email.component.html',
     styleUrls: ['./email.component.css']
 })
 export class PasswordEmailComponent implements OnInit {
-    email: String;
+    user = {
+        email: ""
+    };
 
-    constructor(private authService: AuthService,
-                private userService: UserService,
-                private router: Router,
-                private authGuard: AuthGuard) {
+    emailForm: FormGroup;
+
+    constructor(private userService: UserService,
+                private router: Router) {
     }
 
     ngOnInit() {
-
+        this.emailForm = new FormGroup({
+            'email': new FormControl(this.user.email,
+                [
+                    Validators.required,
+                    Validators.email
+                ])
+        });
     }
 
     onEmailPasswordSubmit() {
-        this.userService.emailPassword(this.email).subscribe(data => {
+        let user = {
+            email: this.emailForm.value.email
+        };
+
+        this.userService.emailPassword(user.email).subscribe(data => {
             if (data.success) {
                 console.log('You are successfully requested your password');
                 this.router.navigate(['/login']);
@@ -33,6 +44,10 @@ export class PasswordEmailComponent implements OnInit {
 
             }
         });
+    }
+
+    get email() {
+        return this.emailForm.get('email');
     }
 
 }

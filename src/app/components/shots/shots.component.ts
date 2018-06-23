@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {Shot} from "../../models/shot.model";
+import {User} from "../../models/user.model";
 import {ShotService} from "../../services/shot.service";
 
 @Component({
@@ -21,7 +22,7 @@ export class ShotsComponent implements OnInit {
     }
 
     getShots(): void {
-        this.shotService.getShots()
+        this.shotService.getShots(new User())
             .subscribe(shots => this.shots = shots);
     }
 

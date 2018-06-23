@@ -15,18 +15,29 @@ import {ShotComponent} from "./components/shot/shot.component";
 import {PasswordEmailComponent} from "./components/passwords/email/email.component";
 import {PasswordResetComponent} from "./components/passwords/reset/reset.component";
 import {PageComponent} from "./components/page/page.component";
-import {AppRouterService, AuthService, ShotService, UserService, PageService, CommonService, ValidateService} from "./services";
+import {ShotModalComponent} from "./components/shot/shot.modal.component";
+import {AuthComponent} from "./components/common/auth.component";
+import {
+    AppRouterService,
+    AuthService,
+    CommonService,
+    PageService,
+    ShotService,
+    UserService,
+    ValidateService
+} from "./services";
 import {AuthGuard, NoAuthGuard} from "./guard";
 import {JwtInterceptor} from "./helpers";
 
 const appRoutes: Routes = [
-    {path: '', component: HomeComponent, data: {is_dark: false}},
-    {path: 'login', component: LoginComponent, canActivate: [NoAuthGuard], data: {is_dark: true}},
-    {path: 'register', component: RegisterComponent, canActivate: [NoAuthGuard], data: {is_dark: true}},
-    {path: 'password/email', component: PasswordEmailComponent, canActivate: [NoAuthGuard], data: {is_dark: true}},
-    {path: 'password/reset', component: PasswordResetComponent, canActivate: [NoAuthGuard], data: {is_dark: true}},
-    {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], data: {is_dark: false}},
-    {path: 'page/:slug', component: PageComponent, data: {is_dark: true}},
+    {path: '', component: HomeComponent, data: {isDark: false}},
+    {path: 'login', component: LoginComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
+    {path: 'register', component: RegisterComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
+    {path: 'password/email', component: PasswordEmailComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
+    {path: 'password/reset', component: PasswordResetComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
+    {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], data: {isDark: false}},
+    {path: 'page/:slug', component: PageComponent, data: {isDark: true}},
+    {path: 'shot/:slug', component: ShotModalComponent, data: {isDark: true, isModal: true}},
 ];
 
 @NgModule({
@@ -42,7 +53,9 @@ const appRoutes: Routes = [
         ShotComponent,
         PasswordEmailComponent,
         PasswordResetComponent,
-        PageComponent
+        PageComponent,
+        ShotModalComponent,
+        AuthComponent
     ],
     imports: [
         BrowserModule,

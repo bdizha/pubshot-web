@@ -9,7 +9,7 @@ html {
 
 body {
     font-size: 16px;
-    color: rgb(38, 38, 38);
+    color: #141414;
     font-family: 'DriveTribe', 'Arial', sans-serif;
     font-weight: 400;
     line-height: 1.20;
@@ -39,12 +39,12 @@ body {
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: rgb(38, 38, 38)
+    background-color: #141414
 }
 
 ::-webkit-scrollbar {
     width: 15px;
-    background-color: rgb(38, 38, 38)
+    background-color: #141414
 }
 
 ::-webkit-scrollbar-thumb {
@@ -64,22 +64,22 @@ strong {
 
 .pub-header {
     padding: 0 10px;
-    background: #e63d1c;
+    background: #ef5416;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     width: 100%;
     overflow: visible;
-    border-top: 4px solid rgb(38, 38, 38);
+    border-top: 4px solid #141414;
 }
 
 .pub-home-page .pub-header {
-    background: rgb(38, 38, 38);
+    background: #141414;
 }
 
 a, a:visited {
-    color: rgb(38, 38, 38);
+    color: #141414;
     text-decoration: none;
 }
 
@@ -109,16 +109,17 @@ a:hover {
 }
 
 .pub-welcome-intro h1 {
+    font-family: 'Yanone Kaffeesatz';
     font-weight: 700;
     font-size: 44px;
     text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
-    rm text-transform: none;
 }
 
 .pub-welcome-intro h2 {
-    font-weight: 400;
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 300;
     font-size: 24px;
     text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -175,8 +176,9 @@ a:hover {
 
 .pub-tabs {
     display: block;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     text-align: center;
+    margin-top: 22px;
 }
 
 .pub-tab {
@@ -186,13 +188,14 @@ a:hover {
 .pub-tabs a.pub-tab {
     color: #FFFFFF;
     text-decoration: none;
-    padding-right: 22px;
+    padding-right: 11px;
+    padding-left: 11px;
 }
 
 .pub-tabs a.pub-tab h2 {
     border-top: 3px solid transparent;
     font-weight: 400;
-    padding-bottom: 11px;
+    padding-bottom: 22px;
     margin-bottom: 0;
     padding-top: 11px;
     font-size: 22px;
@@ -206,7 +209,7 @@ a.pub-tab:hover {
 
 a.pub-tab.pub-tab-current h2,
 a.pub-tab:hover h2 {
-    border-top: 3px solid #fe880d;
+    border-bottom: 2px solid #FFFFFF;
 }
 
 .pub-tab h2 {
@@ -273,8 +276,8 @@ a.pub-tab:hover h2 {
 }
 
 .pub-shot-owner-photo a span {
-    font-weight: 900;
     font-size: 17px;
+    font-weight: 900;
 }
 
 .pub-profile-meta {
@@ -505,6 +508,12 @@ h1 {
     font-weight: 400;
 }
 
+.pub-form-head {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 11px;
+}
+
 .pub-button {
     color: #FFFFFF;
     position: relative;
@@ -520,14 +529,14 @@ h1 {
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
-    border: 2px solid rgb(38, 38, 38);
-    background: rgb(100, 100, 100);
+    border: 2px solid #141414;
+    background: rgb(68, 68, 68);
     border-radius: 500px;
 }
 
 .pub-button:hover {
-    background: rgb(38, 38, 38);
-    border: 2px solid rgb(38, 38, 38);
+    background: #141414;
+    border: 2px solid #141414;
 }
 
 .pub-button-small {
@@ -591,7 +600,7 @@ h1 {
 .pub-auth {
     margin: 0 auto;
     max-width: 400px;
-    margin-top: 75px;
+    margin-top: 60px;
 }
 
 .pub-auth .pub-margin-bottom {
@@ -728,7 +737,7 @@ h1 {
 }
 
 .pub-dark {
-    background: rgb(38, 38, 38);
+    background: #141414;
     /*background: url(/assets/images/pub-backdrop.jpg) no-repeat 0 0;*/
     background-size: cover;
     background-attachment: fixed
@@ -741,7 +750,7 @@ h1 {
 
 .pub-logged .pub-header {
     z-index: 20;
-    background: rgb(38, 38, 38);
+    background: #141414;
 }
 
 .pub-dark .pub-footer .pub-link,
@@ -863,7 +872,6 @@ h1 {
 }
 
 .pub-shot-comments-list {
-
 }
 
 .pub-shot-comments-list .pub-shot-comment-owner {
@@ -902,7 +910,7 @@ h1 {
 .pub-shot-comment-owner .pub-link {
     display: inline-block;
     font-weight: 700;
-    color: rgb(38, 38, 38);
+    color: #141414;
 }
 
 .pub-link:hover {
@@ -930,13 +938,13 @@ h1 {
 }
 
 .pub-shot-pack .pub-shot-column-left {
-    padding: 0 5px;
+    padding: 0;
 }
 
 .pub-shot-owner-name .pub-link {
     font-weight: 900;
     font-size: 16px;
-    color: rgb(38, 38, 38);
+    color: #141414;
 }
 
 .pub-shot-pack-name .pub-link {
@@ -988,13 +996,48 @@ h1 {
     height: 100%;
 }
 
+.pub-dark .pub-shot {
+    border: 1px solid #141414;
+}
+
+.pub-dark .pub-shot-owner-name,
+.pub-dark .pub-shot-owner-name .pub-link,
+.pub-dark .pub-shot-timestamp,
+.pub-dark .pub-shot-owner-photo a span {
+    color: #FFFFFF;
+}
+
+.pub-dark .pub-shot-owner-name .pub-link:hover,
+.pub-dark .pub-shot-owner-photo a:hover span {
+    color: #fe880d;
+}
+
+.pub-dark .pub-shot-owner-photo {
+    width: 48px;
+}
+
+.pub-dark .pub-shot-owner-photo .pub-shot-owner-circle {
+    left: 0;
+}
+
+.pub-dark .pub-shot-owner-photo a {
+    width: 35px;
+}
+
+.pub-dark .pub-shot-head {
+    background-color: #141414;
+}
+
+.pub-dark .pub-shot-head .pub-shot-column-right {
+    padding-right: 0;
+}
+
 .pub-shot .pub-column {
     vertical-align: middle;
 }
 
 .pub-shot-timestamp {
     font-size: 14px;
-    /* font-family: Roboto; */
     font-weight: 300;
 }
 
@@ -1158,7 +1201,7 @@ h1 {
 
 .pub-active .pub-icon-menu svg g,
 .pub-shot-act:hover .pub-icon-menu svg g {
-    fill: #e63d1c !important;
+    fill: #ef5416 !important;
 }
 
 .pub-shot-act-label {
@@ -1200,6 +1243,10 @@ h1 {
     font-weight: 500;
 }
 
+.pub-modal .pub-footer {
+    display: none;
+}
+
 .pub-nav {
     position: relative;
 }
@@ -1218,6 +1265,34 @@ h1 {
 .pub-nav .pub-logo.pub-column {
     width: 110px;
     padding: 0 10px;
+}
+
+.pub-nav .pub-logo .pub-logo-icon {
+    width: 38px;
+    display: inline-block;
+}
+
+.pub-logo-inner {
+    display: inline-block;
+    padding-left: 42px;
+    height: 34px;
+    position: relative;
+}
+
+.pub-logo-inner .pub-logo-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.pub-logo-inner .pub-logo-text {
+    font-family: 'Yanone Kaffeesatz';
+    display: inline-block;
+    font-size: 32px;
+    color: #FFFFFF;
+    line-height: 34px;
+    font-weight: 300;
 }
 
 .pub-nav .pub-search-input.pub-column {
@@ -1279,7 +1354,7 @@ app-root {
 }
 
 app-root .pub-overlay {
-    background: rgb(38, 38, 38);
+    background: #141414;
     height: 100%;
 }
 
@@ -1434,19 +1509,19 @@ app-root .pub-overlay {
     opacity: 1
 }
 
-.pub-profile-shots ul li:hover .content-details a{
+.pub-profile-shots ul li:hover .content-details a {
     color: #FE9C35;
 }
 
-.pub-profile-shots ul li:hover .content-details .btn{
+.pub-profile-shots ul li:hover .content-details .btn {
     font-size: 14px;
     line-height: 1;
     border-radius: 500px;
-    padding: 16px 16pxK;
-    -webkit-transition-property: background-color,border-color,color,-webkit-box-shadow,-webkit-filter;
-    transition-property: background-color,border-color,color,-webkit-box-shadow,-webkit-filter;
-    transition-property: background-color,border-color,color,box-shadow,filter;
-    transition-property: background-color,border-color,color,box-shadow,filter,-webkit-box-shadow,-webkit-filter;
+    padding: 16px 16 pxK;
+    -webkit-transition-property: background-color, border-color, color, -webkit-box-shadow, -webkit-filter;
+    transition-property: background-color, border-color, color, -webkit-box-shadow, -webkit-filter;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-property: background-color, border-color, color, box-shadow, filter, -webkit-box-shadow, -webkit-filter;
     -webkit-transition-duration: .3s;
     transition-duration: .3s;
     border-width: 0;
@@ -1524,8 +1599,8 @@ app-root .pub-overlay {
 
 .pub-home {
     background-color: #fe880d;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #e63d1c), color-stop(90%, #fe880d));
-    background: linear-gradient(#e63d1c 10%, #fe880d 90%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ef5416), color-stop(90%, #fe880d));
+    background: linear-gradient(#ef5416 10%, #fe880d 90%);
     padding: 48px 0;
 }
 
@@ -1553,6 +1628,10 @@ app-root .pub-overlay {
 .pub-logo-link {
     display: block;
     height: 36px;
+}
+
+.pub-hand{
+    cursor: pointer;
 }
 
 .pub-logo-link img {
@@ -1663,25 +1742,25 @@ app-root .pub-overlay {
     border: 2px solid #FFFFFF;
     width: 40%;
     line-height: 1;
-    border-radius: 0px;
+    border-radius: 500px;
     padding: 16px 48px 18px;
 }
 
 .pub-home-buttons .pub-sign-in {
     color: #FFFFFF;
-    background: rgb(38, 38, 38);
+    background: #141414;
 }
 
 .pub-home-buttons .pub-create-account {
-    color: rgb(38, 38, 38);
+    color: #141414;
     background: #FFFFFF;
     font-weight: 700;
-    border: 2px solid rgb(38, 38, 38);
+    border: 2px solid #141414;
 }
 
 .pub-home-buttons .pub-create-account:hover {
     color: #FFFFFF;
-    background: rgb(38, 38, 38);
+    background: #141414;
 }
 
 .pub-loader {

@@ -3,7 +3,7 @@ export class User {
     last_name: string;
     username: string;
     created_at: string;
-    id: number;
+    id: number = null;
     bio: string;
     email: number;
     updated_at: string;

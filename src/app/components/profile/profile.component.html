@@ -45,220 +45,31 @@
     </div>
     <div class="pub-profile-shots pub-shadow pub-radius">
         <ul>
-
-            <li class="col-xs-12 col-sm-4 js-album-results-1" data-sr-id="3" style="">
-
-                <figure onclick="location.href='https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw';" >
-
+            <li class="col-xs-12 col-sm-4 js-album-results-1" *ngFor="let shot of shots">
+                <figure>
                     <div class="box">
-                        <div class="content">
-                            <img class="img-responsive" src="https://i.scdn.co/image/16f3175ed80e61a060f2ff5a212407aedc496a9c" title="NASIR" alt="NASIR" onclick="location.href='https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw';" >
-                        </div>
+                        <a class="content" routerLink="/shot/{{ shot.slug }}">
+                            <img class="img-responsive" src="{{ shot.media }}" title="{{ shot.caption }}">
+                        </a>
                     </div>
-
                     <div class="hidden-xs content-overlay" onclick="location.href='https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw';" ></div>
-
                     <div class="hidden-xs content-details">
-
                         <figcaption class="album-play-button">
                             <h2 class="text-white">NASIR</h2>
                             <h4 class="text-white">Nas</h4>
-                            <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw" role="button">
-                                <a href="https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw"  onclick="location.href='https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw';">Flame Now</a>
+                            <div class="btn btn-link" role="button">
+                                <a routerLink="/shot/{{ shot.slug }}">Flame Now</a>
                             </div>
                         </figcaption>
 
                     </div>
                 </figure>
-
                 <figcaption class="scroll hidden-sm hidden-md hidden-lg">
-
                     <h2 onclick="location.href='https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw';" >NASIR</h2>
                     <h4 onclick="location.href='https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw';" >Nas</h4>
-                    <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw" role="button">
-                        <a href="https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw"  onclick="location.href='https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw';">Flame Now</a>
+                    <div class="btn btn-link" role="button">
+                        <a href="https://open.spotify.com/album/66EwBbt2kPgugo8Wz0SKAw" routerLink="/shot/{{ shot.slug }}">Flame Now</a>
                     </div>
-
-                </figcaption>
-            </li>
-
-            <li class="col-xs-12 col-sm-4 js-album-results-2" data-sr-id="5" style="">
-
-                <figure onclick="location.href='https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A';" >
-
-                    <div class="box">
-                        <div class="content">
-                            <img class="img-responsive" src="https://i.scdn.co/image/b09a4639180fb03288aa7c6a6bc5c77f930a4073" title="Redemption" alt="Redemption" onclick="location.href='https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A';" >
-                        </div>
-                    </div>
-
-                    <div class="hidden-xs content-overlay" onclick="location.href='https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A';" ></div>
-
-                    <div class="hidden-xs content-details">
-
-                        <figcaption class="album-play-button">
-                            <h2 class="text-white">Redemption</h2>
-                            <h4 class="text-white">Jay Rock</h4>
-                            <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A" role="button">
-                                <a href="https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A"  onclick="location.href='https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A';">Flame Now</a>
-                            </div>
-                        </figcaption>
-
-                    </div>
-                </figure>
-
-                <figcaption class="scroll hidden-sm hidden-md hidden-lg">
-
-                    <h2 onclick="location.href='https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A';" >Redemption</h2>
-                    <h4 onclick="location.href='https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A';" >Jay Rock</h4>
-                    <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A" role="button">
-                        <a href="https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A"  onclick="location.href='https://open.spotify.com/album/6PpxiZQQonnX3aS52Ayr9A';">Flame Now</a>
-                    </div>
-
-                </figcaption>
-            </li>
-
-            <li class="col-xs-12 col-sm-4 js-album-results-0" data-sr-id="1" style="">
-
-                <figure onclick="location.href='https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T';" >
-
-                    <div class="box">
-                        <div class="content">
-                            <img class="img-responsive" src="https://i.scdn.co/image/8c154fd359a09fa74f6433f38c649199e0c39e98" title="Growing Pains" alt="Growing Pains" onclick="location.href='https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T';" >
-                        </div>
-                    </div>
-
-                    <div class="hidden-xs content-overlay" onclick="location.href='https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T';" ></div>
-
-                    <div class="hidden-xs content-details">
-
-                        <figcaption class="album-play-button">
-                            <h2 class="text-white">Growing Pains</h2>
-                            <h4 class="text-white">Alessia Cara</h4>
-                            <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T" role="button">
-                                <a href="https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T"  onclick="location.href='https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T';">Flame Now</a>
-                            </div>
-                        </figcaption>
-
-                    </div>
-                </figure>
-
-                <figcaption class="scroll hidden-sm hidden-md hidden-lg">
-
-                    <h2 onclick="location.href='https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T';" >Growing Pains</h2>
-                    <h4 onclick="location.href='https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T';" >Alessia Cara</h4>
-                    <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T" role="button">
-                        <a href="https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T"  onclick="location.href='https://open.spotify.com/album/3mzHuQmDLVuecodQNKUd0T';">Flame Now</a>
-                    </div>
-
-                </figcaption>
-            </li>
-
-            <li class="col-xs-12 col-sm-4 js-album-results-1" data-sr-id="4" style="">
-
-                <figure onclick="location.href='https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6';" >
-
-                    <div class="box">
-                        <div class="content">
-                            <img class="img-responsive" src="https://i.scdn.co/image/31cb00fdf112107f4a4f507e1a6dec94dc6ca134" title="Keeping Score (feat. Kelly Clarkson)" alt="Keeping Score (feat. Kelly Clarkson)" onclick="location.href='https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6';" >
-                        </div>
-                    </div>
-
-                    <div class="hidden-xs content-overlay" onclick="location.href='https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6';" ></div>
-
-                    <div class="hidden-xs content-details">
-
-                        <figcaption class="album-play-button">
-                            <h2 class="text-white">Keeping Score (feat. Kelly Clarkson)</h2>
-                            <h4 class="text-white">Dan + Shay</h4>
-                            <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6" role="button">
-                                <a href="https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6"  onclick="location.href='https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6';">Flame Now</a>
-                            </div>
-                        </figcaption>
-
-                    </div>
-                </figure>
-
-                <figcaption class="scroll hidden-sm hidden-md hidden-lg">
-
-                    <h2 onclick="location.href='https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6';" >Keeping Score (feat. Kelly Clarkson)</h2>
-                    <h4 onclick="location.href='https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6';" >Dan + Shay</h4>
-                    <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6" role="button">
-                        <a href="https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6"  onclick="location.href='https://open.spotify.com/album/26ibOxd9ZA0pIfk2yTtOg6';">Flame Now</a>
-                    </div>
-
-                </figcaption>
-            </li>
-
-            <li class="col-xs-12 col-sm-4 js-album-results-2" data-sr-id="6" style="">
-
-                <figure onclick="location.href='https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH';" >
-
-                    <div class="box">
-                        <div class="content">
-                            <img class="img-responsive" src="https://i.scdn.co/image/9fb2e6597a8e91978f2cc7a0b60e0044033c65ce" title="Ocean (feat. Khalid)" alt="Ocean (feat. Khalid)" onclick="location.href='https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH';" >
-                        </div>
-                    </div>
-
-                    <div class="hidden-xs content-overlay" onclick="location.href='https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH';" ></div>
-
-                    <div class="hidden-xs content-details">
-
-                        <figcaption class="album-play-button">
-                            <h2 class="text-white">Ocean (feat. Khalid)</h2>
-                            <h4 class="text-white">Martin Garrix</h4>
-                            <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH" role="button">
-                                <a href="https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH"  onclick="location.href='https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH';">Flame Now</a>
-                            </div>
-                        </figcaption>
-
-                    </div>
-                </figure>
-
-                <figcaption class="scroll hidden-sm hidden-md hidden-lg">
-
-                    <h2 onclick="location.href='https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH';" >Ocean (feat. Khalid)</h2>
-                    <h4 onclick="location.href='https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH';" >Martin Garrix</h4>
-                    <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH" role="button">
-                        <a href="https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH"  onclick="location.href='https://open.spotify.com/album/1XQ6XbZ6ZM1V5iEtWlYDeH';">Flame Now</a>
-                    </div>
-
-                </figcaption>
-            </li>
-
-            <li class="col-xs-12 col-sm-4 js-album-results-0" data-sr-id="2" style="">
-
-                <figure onclick="location.href='https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I';" >
-
-                    <div class="box">
-                        <div class="content">
-                            <img class="img-responsive" src="https://i.scdn.co/image/3ae355a2475776af30d0fff18acf339ef7d6e3f6" title="Bigger Than You feat. Drake &amp; Quavo" alt="Bigger Than You feat. Drake &amp; Quavo" onclick="location.href='https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I';" >
-                        </div>
-                    </div>
-
-                    <div class="hidden-xs content-overlay" onclick="location.href='https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I';" ></div>
-
-                    <div class="hidden-xs content-details">
-
-                        <figcaption class="album-play-button">
-                            <h2 class="text-white">Bigger Than You feat. Drake &amp; Quavo</h2>
-                            <h4 class="text-white">2 Chainz</h4>
-                            <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I" role="button">
-                                <a href="https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I"  onclick="location.href='https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I';">Flame Now</a>
-                            </div>
-                        </figcaption>
-
-                    </div>
-                </figure>
-
-                <figcaption class="scroll hidden-sm hidden-md hidden-lg">
-
-                    <h2 onclick="location.href='https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I';" >Bigger Than You feat. Drake &amp; Quavo</h2>
-                    <h4 onclick="location.href='https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I';" >2 Chainz</h4>
-                    <div id="segmented-play-now" class="btn btn-link" data-link="https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I" role="button">
-                        <a href="https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I"  onclick="location.href='https://open.spotify.com/album/3Lh72gPELN4MIUJd3dYN6I';">Flame Now</a>
-                    </div>
-
                 </figcaption>
             </li>
         </ul>

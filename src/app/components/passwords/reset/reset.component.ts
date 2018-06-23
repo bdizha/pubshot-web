@@ -3,9 +3,10 @@ import {AuthService} from "../../../services/auth.service";
 import {UserService} from "../../../services/user.service";
 import {Router} from "@angular/router";
 import {AuthGuard} from "../../../guard/auth.guard";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-    selector: 'app-auth',
+    selector: 'app-password-reset',
     templateUrl: './reset.component.html',
     styleUrls: ['./reset.component.css']
 })
