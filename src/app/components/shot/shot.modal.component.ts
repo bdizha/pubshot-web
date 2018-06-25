@@ -6,8 +6,7 @@ import {Shot} from "../../models/shot.model";
 
 @Component({
     selector: 'app-shot-modal',
-    templateUrl: './shot.modal.component.html',
-    styleUrls: ['./shot.component.css']
+    templateUrl: './shot.modal.component.html'
 })
 
 export class ShotModalComponent implements OnInit {

@@ -13,8 +13,6 @@ export class AppRouterService {
 
     private getRouteData(data: string): any {
         const root = this.router.routerState.snapshot.root;
-
-        console.log(this.lastChild(root).data[data], "....");
         return this.lastChild(root).data[data];
     }
 

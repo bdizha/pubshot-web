@@ -12,6 +12,10 @@ import {WelcomeComponent} from "./components/welcome/welcome.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {ShotsComponent} from "./components/shots/shots.component";
 import {ShotComponent} from "./components/shot/shot.component";
+import {CommentsComponent} from "./components/comments/comments.component";
+import {CommentComponent} from "./components/comment/comment.component";
+import {PacksComponent} from "./components/packs/packs.component";
+import {PackComponent} from "./components/pack/pack.component";
 import {PasswordEmailComponent} from "./components/passwords/email/email.component";
 import {PasswordResetComponent} from "./components/passwords/reset/reset.component";
 import {PageComponent} from "./components/page/page.component";
@@ -24,7 +28,8 @@ import {
     PageService,
     ShotService,
     UserService,
-    ValidateService
+    ValidateService,
+    CommentService
 } from "./services";
 import {AuthGuard, NoAuthGuard} from "./guard";
 import {JwtInterceptor} from "./helpers";
@@ -33,11 +38,23 @@ const appRoutes: Routes = [
     {path: '', component: HomeComponent, data: {isDark: false}},
     {path: 'login', component: LoginComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
     {path: 'register', component: RegisterComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
-    {path: 'password/email', component: PasswordEmailComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
-    {path: 'password/reset', component: PasswordResetComponent, canActivate: [NoAuthGuard], data: {isDark: true, isAuth: true}},
+    {
+        path: 'password/email',
+        component: PasswordEmailComponent,
+        canActivate: [NoAuthGuard],
+        data: {isDark: true, isAuth: true}
+    },
+    {
+        path: 'password/reset',
+        component: PasswordResetComponent,
+        canActivate: [NoAuthGuard],
+        data: {isDark: true, isAuth: true}
+    },
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], data: {isDark: false}},
     {path: 'page/:slug', component: PageComponent, data: {isDark: true}},
     {path: 'shot/:slug', component: ShotModalComponent, data: {isDark: true, isModal: true}},
+    {path: 'packs', component: PacksComponent, data: {isDark: true, isModal: true}},
+    {path: 'pack/:slug', component: PackComponent, data: {isDark: true, isModal: true}},
 ];
 
 @NgModule({
@@ -51,11 +68,15 @@ const appRoutes: Routes = [
         ProfileComponent,
         ShotsComponent,
         ShotComponent,
+        PackComponent,
+        PacksComponent,
         PasswordEmailComponent,
         PasswordResetComponent,
         PageComponent,
         ShotModalComponent,
-        AuthComponent
+        AuthComponent,
+        CommentsComponent,
+        CommentComponent
     ],
     imports: [
         BrowserModule,
@@ -71,6 +92,7 @@ const appRoutes: Routes = [
         NoAuthGuard,
         CommonService,
         ShotService,
+        CommentService,
         PageService,
         AppRouterService,
         UserService,

@@ -866,12 +866,13 @@ h1 {
 }
 
 .pub-shot-comments {
-    margin-top: 11px;
+    margin-top: 22px;
     padding: 0;
     color: #333;
 }
 
 .pub-shot-comments-list {
+    margin-bottom: 22px;
 }
 
 .pub-shot-comments-list .pub-shot-comment-owner {
@@ -938,7 +939,7 @@ h1 {
 }
 
 .pub-shot-pack .pub-shot-column-left {
-    padding: 0;
+    padding: 0 0 0 15px;
 }
 
 .pub-shot-owner-name .pub-link {
@@ -1016,6 +1017,10 @@ h1 {
     width: 48px;
 }
 
+.pub-dark .pub-icon-menu{
+    margin-right: 0;
+}
+
 .pub-dark .pub-shot-owner-photo .pub-shot-owner-circle {
     left: 0;
 }
@@ -1024,12 +1029,12 @@ h1 {
     width: 35px;
 }
 
-.pub-dark .pub-shot-head {
-    background-color: #141414;
+.pub-dark .pub-shot-pack{
+    background-color: #222222;
 }
 
-.pub-dark .pub-shot-head .pub-shot-column-right {
-    padding-right: 0;
+.pub-dark .pub-shot-head {
+    background-color: #222222;
 }
 
 .pub-shot .pub-column {
@@ -1052,7 +1057,7 @@ h1 {
 
 .pub-shot-column-right {
     width: 60px;
-    padding: 22px;
+    padding: 22px 15px;
     white-space: nowrap;
 }
 
@@ -1666,15 +1671,48 @@ app-root .pub-overlay {
 .pub-shot-comment-form {
     position: relative;
     padding-top: 10px;
+    width: 100%;
+    bottom: 12px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    z-index: 1;
 }
 
 .pub-shot-comment-input {
-    border-top: 1px solid #e5e5e5;
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.pub-shot-comment-button {
+    outline: none;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.pub-shot-comment-button[disabled] svg path{
+    fill: rgba(254, 136, 13, 0.5);
+}
+
+.pub-shot-comment-input .form-group{
+    margin: 0;
+    padding: 0;
 }
 
 .pub-shot-comment-input .pub-input {
-    padding: 15px 0 0;
+    padding: 10px 12px;
+    height: auto;
     border: none;
+    border-radius: 8px;
+    background-color: #222222;
+    color: #FFFFFF;
 }
 
 .pub-shot-comment-input .pub-input:hover,

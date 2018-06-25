@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from "@angular/core";
 import {Shot} from "../../models/shot.model";
-import {Location} from "@angular/common";
 
 @Component({
     selector: 'app-shot',
@@ -11,14 +10,10 @@ export class ShotComponent implements OnInit {
 
     @Input() shot: Shot;
 
-    constructor(private location: Location) {
+    constructor() {
     }
 
     ngOnInit() {
         console.log("shot", this.shot);
-    }
-
-    goBack(): void {
-        this.location.back();
     }
 }

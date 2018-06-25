@@ -1,0 +1,16 @@
+<div *ngIf="comments.length" class="pub-shot-comments-list">
+    <div *ngFor="let comment of comments" class="pub-shot-comment">
+        <app-comment [comment]="comment"></app-comment>
+    </div>
+</div>
+<form class="pub-shot-comment-form" [formGroup]="commentForm" (ngSubmit)="onCommentSubmit()">
+    <div class="pub-shot-comment-input">
+        <input type="text" class="pub-input form-control" formControlName="content" placeholder="Add a response..." name="content" id="content"/>
+    </div>
+    <button type="submit" class="pub-shot-comment-button" [disabled]="commentForm.invalid">
+        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24" width="28" height="24">
+            <path fill="#fe880d"
+                  d="M5.101 21.757L27.8 12.028 5.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z"></path>
+        </svg>
+    </button>
+</form>

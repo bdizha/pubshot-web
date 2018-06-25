@@ -1,5 +1,5 @@
 <div class="pub-list">
-    <a *ngFor="let shot of shots" class="pub-shot" routerLink="/shot/{{ shot.slug }}" id="pub-shot-{{ shot.id }}">
+    <div *ngFor="let shot of shots" class="pub-shot" id="pub-shot-{{ shot.id }}">
         <app-shot [shot]="shot"></app-shot>
-    </a>
+    </div>
 </div>

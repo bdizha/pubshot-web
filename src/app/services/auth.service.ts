@@ -1,34 +1,38 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
 import {BaseService} from "./base.service";
-import {CONFIG} from "./config.service";
-import {map} from "rxjs/operators";
 
 @Injectable()
 export class AuthService extends BaseService {
     user: any;
     authToken: any;
+    userId: any;
 
-    constructor(private http: HttpClient) {
+    constructor() {
         super();
-        this.loadToken();
+        this.loadStorage();
     }
 
     storeUser(token, user) {
         localStorage.setItem('token_id', token);
         localStorage.setItem('user', JSON.stringify(user));
+        console.log("after json stringify", JSON.stringify(user));
+
         this.authToken = token;
         this.user = user;
     }
 
-    loadToken() {
+    loadStorage() {
         this.authToken = localStorage.getItem('token_id');
-        console.log(this.authToken, "loadToken >>>>");
+        this.user = JSON.parse(localStorage.getItem('user'));
     }
 
     getToken() {
-        console.log(this.authToken, "getToken >>>>");
         return this.authToken;
+    }
+
+    getUserId() {
+        console.log(this.user, "user >>>>");
+        return this.user.id;
     }
 
     logout() {
@@ -40,8 +44,4 @@ export class AuthService extends BaseService {
     isLogged() {
         return !!this.authToken;
     }
-
-    //  catchError(this.handleError('getShots', []))
-
-
 }

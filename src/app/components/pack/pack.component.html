@@ -76,6 +76,25 @@
         {{ shot.caption }}
     </div>
     <div class="pub-shot-comments">
-        <app-comments [shot]="shot"></app-comments>
+        <div class="pub-shot-comments-list">
+            <div class="pub-shot-comment">
+                <a href="#" class="pub-shot-comment-owner">@fuckmore</a>
+                <span class="pub-shot-comment-content">yes, I'm so thrilled with this moment.</span>
+            </div>
+            <div class="pub-shot-comment">
+                <a href="#" class="pub-shot-comment-owner">@brucelee</a>
+                <span class="pub-shot-comment-content">fucking fucking moments.</span>
+            </div>
+            <div class="pub-shot-comment">
+                <a href="#" class="pub-shot-comment-owner">@pitbull</a>
+                <span class="pub-shot-comment-content">that's a dog style...and she's still lookin wow!!! I like I like</span>
+            </div>
+        </div>
+        <div class="pub-shot-comment-form">
+            <div class="pub-shot-comment-input">
+                <input class="pub-input" data-shot-id="81" submit="true" placeholder="Add a response..."
+                       name="comment" type="text" value="" id="comment">
+            </div>
+        </div>
     </div>
 </div>

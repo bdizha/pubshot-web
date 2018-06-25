@@ -29,15 +29,9 @@ export class ProfileComponent implements OnInit {
     }
 
     getShots(user: User): void {
-
-        console.log(user, " user ????");
-
-
         this.shotService.getShots(user)
             .subscribe(shots => {
                 this.shots = shots;
-
-                console.log(this.shots, " shots ...");
             });
     }
 
